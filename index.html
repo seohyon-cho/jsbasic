@@ -122,9 +122,30 @@
 
       //특정 조건이 있을 때, 딱 한 줄의 코드만 실행되면 되고, 
         특정 조건이 아니면 아무 일도 발생시키지 않을 때에는 아래와 같은 표현식을 많이 씀. 
-      if(조건식) 실행할 코드 한 줄
+      if(조건식) 실행할 코드 한 줄;
     */
 
+    // 현재 시간 값 반환
+    const hour = new Date().getHours();
+    // 현재 시간이 5보다 같거나 크면서, 동시에 12보다 작을 때
+    // console.log(hour >= 5 && hour < 12);
+    // 현재 시간이 5보다 같거나 크거나, 또는 12보다 작을 때
+    // console.log(hour >= 5 || hour < 12);
+    // body 요소의 style 값 중, 배경색에 해당하는 값을 aqua로 대입.
+    // document.body.style.backgroundColor = 'aqua';
+
+    if (hour >= 5 && hour < 12) {
+      document.body.style.backgroundColor = 'orange';
+    }
+    if (hour >= 12 && hour < 16) {
+      document.body.style.backgroundColor = 'lightblue';
+    }
+    if (hour >= 16 && hour < 20) {
+      document.body.style.backgroundColor = 'pink';
+    }
+    if (hour >= 20 || hour < 5) {
+      document.body.style.backgroundColor = 'black';
+    }
   </script>
 </body>
 
