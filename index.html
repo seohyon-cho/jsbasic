@@ -33,6 +33,20 @@
     */
 
 
+
+    /*
+      객체의 property에 변수 연결하는 방법
+      : ES6 이후로, 객체의 property key값을 변수로 치환 가능하게 됨. 
+      : 객체의 property key값을 대괄호[]로 묶으면 변수 활용 가능.  // [property key]: value
+    */
+
+    let name = 'abcde';
+    const student = {
+      [name]: 'David'
+    }
+    console.log(student.abcde);
+
+
   </script>
 </body>
 
