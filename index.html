@@ -175,6 +175,23 @@
     console.log(colors[1]);
     console.log(colors.length);
 
+    /*
+      객체 : 여러 개의 값을 그룹화 할 때 활용 (자료구조가 복잡할 때)
+    */
+    const iphone1 = {
+      price: 1000, // 이 한 줄이 property
+      color: 'white', // property key값(color) : property value('white'),
+      isSale: false
+    };
+    console.log(iphone1);
+    // 객체 값을 뽑을 때
+    console.log(iphone1.price);
+    console.log(iphone1['color']);
+    // 객체 값을 추가할 때
+    iphone1.weight = '1kg';
+    console.log(iphone1);
+
+
   </script>
 </body>
 
