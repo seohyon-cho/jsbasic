@@ -64,7 +64,7 @@
     }
     let data = null;
 
-    console.log(typeof data1);
+    console.log(typeof data);
 
 
     /*
@@ -101,8 +101,8 @@
     color[0] = 'hotpink';
     console.log(color);
     // 그러나 아래처럼 color라는 변수 자체에 새롭게 값을 재할당 하려고 하면 변수에는 새로운 참조링크가 할당되므로,
-    // callstack에 있는 변수(color)에 새로운 참조링크가 재할당되는 것이므로 에러가 발생됨. 
-    color = [1, 2, 3];
+    // callstack에 있는 변수(color)에 새로운 참조링크가 재할당되는 것이므로 에러가 발생됨.
+    // color = [1, 2, 3];
 
     // 변수에 숫자를 담을 거라면 = 0; 으로 초기화
     // let num = 0;
@@ -110,11 +110,81 @@
     // 변수에 문자형을 담을 거라면 = ''; 으로 초기화
     // let txt = '';
     // 변수에 boolean값을 담을 거라면 = true; 으로 초기화
-    // let isTure = true;
+    // let isTrue = true;
 
     /*
-      
+      함수(function)
+      : 자주 쓰는 여러 개의 코드들을 패키징해서 재활용하기 위함.
+      : 함수를 먼저 정의해줘야 이후부터 호출이 가능해짐.
+      : 함수 정의 시, 이름을 안 붙인 함수를 '익명 함수', 이름을 붙인 함수를 '기명 함수'라고 함.
+
+      매개변수(parameter), 인수(argument)
+      : 매개변수 - 외부의 값을 함수 내부로 전달하기 위한 통로명
+      : 인수 - 함수의 매개변수를 통해서 전달되는 값 자체.
+
+      익명함수는 보통 이벤트와 결합해서 사용할 때 쓰임.
+      독립적으로 함수를 호출해 쓰고 싶을 떄 쓰는 함수는 '기명 함수'
     */
+
+    // 함수의 정의 (name이라는 매개변수가 연결되어 있는 함수)
+    // 매개변수를 선언할 때에는 아무렇게나 짓기보다는, convention에 맞게 짓는 것이 바람직함. 
+    /*  function inform(name) {
+      console.log(name + '님 안녕하세요.');
+      console.log('홍길동님 안녕하세요.');
+      console.log('홍길동님 안녕하세요.');
+    };
+    // 함수 호출 (inform 함수 호출 시, '홍길동' 이라는 인수 전달.)
+     inform('홍길동'); */
+
+    function pass(num1, num2) {
+      const plus = num1 + num2;
+      return plus;
+    }
+
+    console.log(pass(3, 7));
+
+    // 선생님이 알려주신 방식 (문제1)
+    function plus(num1, num2) {
+      const result = num1 + num2;
+      console.log(result);
+    }
+
+    plus(2, '3');
+
+    // 선생님이 알려주신 방식 (문제2)
+    function plus2(num3, num4) {
+      // 첫 번째, 두 번째 파라미터로 전달되는 값의 자료형을 문자열로 typeNum3, typeNum4 변수에 저장.
+      const typeNum3 = typeof num3;
+      const typeNum4 = typeof num4;
+      console.log(typeNum3);
+      console.log(typeNum4);
+      // 두 변수의 타입 문자 값이 모두 number(숫자)이면 두 개 값을 더해서 콘솔 출력.
+      if (typeNum3 === 'number' && typeNum4 === 'number') {
+        console.log(num3 + num4);
+      } else {
+        console.log('숫자만 입력해주세요.');
+      }
+    }
+
+    plus2('2', 3);
+
+
+
+
+    // function pass2(num3, num4) {
+    //   if (typeof num3 = Number && typeof num4 = Number) {
+    //     plus2 = num3 + num4;
+    //     return plus2;
+    //   }else {
+    //     console.log('숫자만 입력하세요.');
+    //   };
+    // };
+
+    // pass2(1, 2);
+
+
+
+
 
   </script>
 </body>
