@@ -135,6 +135,17 @@
       : 함수 내부 로직에서 에러가 발생될만한 상황이면 불필요하게 다음 코드들을 실행하지 않고
       해당 함수를 강제로 종료해야 할때.
 
+      true, false는 아니지만 true, false로 인지되는 값들이 있음. 
+      - true로 인지되는 값들
+      : 빈 문자가 아닌 문자 값 
+      : 0이 아닌 숫자 값
+      
+      - false로 인지되는 값들
+      : 빈 문자 값
+      : 숫자 0 
+      : undefined
+      : null
+
       익명함수는 보통 이벤트와 결합해서 사용할 때 쓰임.
       독립적으로 함수를 호출해 쓰고 싶을 떄 쓰는 함수는 '기명 함수'
     */
@@ -174,12 +185,13 @@
 
       //에러 상황이 발생되어서 불필요하게 코드를 실행할 필요가 없을 때
       // return을 이용해서 강제 함수실행 중지.
-      if (data === undefined) return;
+      // if(data !== undefined) return;
+      if (!data) return;
       console.log(data);
       console.log(data);
       console.log(data);
     };
-    heavyWork();
+    heavyWork('');
 
 
 
