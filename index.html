@@ -281,7 +281,17 @@
     function test2(name) {
       name && console.log(name + '님 반갑습니다.');
     }
-    test2(1);
+    test2(false);
+
+
+    function test3(name) {
+      let defaultName = '아무개';
+      // && 연산자 뒤에 = (대입) 연산자가 들어올 수 없으므로 , 대입연산 구문을 괄호처리해서 그룹화해야 함.
+      !name && (name = defaultName);
+      console.log(name + '님 반갑습니다.');
+    }
+    test3(true);
+
 
   </script>
 </body>
