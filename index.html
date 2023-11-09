@@ -33,11 +33,26 @@
     // 첫 번째 인수(현재 반복되는 배열의 각 데이터 값)
     // 두 번째 인수(현재 반복되는 순번)
     // 세 번째 인수(반복되는 원본 배열값 전체)
-    colors.forEach(function (data, index, array) {
+    colors.forEach(function (data, index, arr) {
       console.log('data', data);
       console.log('index', index);
-      console.log('array', array);
+      // console.log('arr', arr);
     });
+
+    const names = ['홍길동', '김판섭', '박영철'];
+    // 배열 값을 인수로 받아서 'ㅇㅇㅇ'님 반갑습니다. 라는 콘솔문을 자동 반복해주는 함수 생성.
+    names.forEach(function (data) {
+      console.log(data + '님 반갑습니다.');
+    });
+
+
+    //선생님이 알려주신 방식
+    function intro(arr) {
+      arr.forEach(function (data) {
+        console.log(data + '님 반갑습니다.');
+      });
+    }
+    intro(names);
 
 
   </script>
