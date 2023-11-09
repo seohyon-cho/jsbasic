@@ -163,6 +163,24 @@
     console.log(returnPlus(2, 3) + returnPlus(4, 5));
 
 
+    // 엄청 로직이 무거운 함수
+    function heavyWork(data) {
+      /* f (data !== undefined) {
+        console.log(data);
+        console.log(data);
+        console.log(data);
+      }
+      */
+
+      //에러 상황이 발생되어서 불필요하게 코드를 실행할 필요가 없을 때
+      // return을 이용해서 강제 함수실행 중지.
+      if (data === undefined) return;
+      console.log(data);
+      console.log(data);
+      console.log(data);
+    };
+    heavyWork();
+
 
 
 
