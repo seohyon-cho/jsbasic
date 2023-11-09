@@ -41,7 +41,24 @@
     }
     console.log(minus(5, 2));
 
+    // 화살표 함수 예시 (대입형 함수를 축약한 형태)
+    const multiply = (num1, num2) => {
+      return num1 * num2;
+    };
+    const result = multiply(2, 5);
+    console.log('multiply', result);
 
+    // 화살표 함수에서 return문 생략한 형태 
+    const multiply2 = (num1, num2) => num1 * num2
+    // 화살표 뒤에 중괄호가 없고, return문 없이 바로 특정 값을 도출하는 연산식이 있으면
+    // 해당 값 자체가 자동 return
+    // 위에 return 함수와 동일한 구문
+
+    console.log('multiply2', multiply2(3, 5));
+
+    // 굳이 return할 필요가 없는 함수라도 코드의 간결화를 위해 축약하는 경우도 있음. 
+    const introduce3 = name => name && console.log(name + '님 반갑습니다.');
+    introduce3('');
 
 
 
