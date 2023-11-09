@@ -127,7 +127,7 @@
     */
 
     // 함수의 정의 (name이라는 매개변수가 연결되어 있는 함수)
-    // 매개변수를 선언할 때에는 아무렇게나 짓기보다는, convention에 맞게 짓는 것이 바람직함. 
+    // 매개변수를 선언할 때에는 아무렇게나 짓기보다는, convention에 맞게 짓는 것이 바람직함.
     /*  function inform(name) {
       console.log(name + '님 안녕하세요.');
       console.log('홍길동님 안녕하세요.');
@@ -136,52 +136,41 @@
     // 함수 호출 (inform 함수 호출 시, '홍길동' 이라는 인수 전달.)
      inform('홍길동'); */
 
-    function pass(num1, num2) {
-      const plus = num1 + num2;
-      return plus;
-    }
+    // function pass(num1, num2) {
+    //   const plus = num1 + num2;
+    //   return plus;
+    // }
 
-    console.log(pass(3, 7));
+    // console.log(pass(3, 7));
 
     // 선생님이 알려주신 방식 (문제1)
-    function plus(num1, num2) {
-      const result = num1 + num2;
-      console.log(result);
-    }
 
-    plus(2, '3');
+    // function plus(num1, num2) {
+    //   const result = num1 + num2;
+    //   console.log(result);
+    // }
+
+    // plus(2, '3');
 
     // 선생님이 알려주신 방식 (문제2)
-    function plus2(num3, num4) {
-      // 첫 번째, 두 번째 파라미터로 전달되는 값의 자료형을 문자열로 typeNum3, typeNum4 변수에 저장.
-      const typeNum3 = typeof num3;
-      const typeNum4 = typeof num4;
-      console.log(typeNum3);
-      console.log(typeNum4);
-      // 두 변수의 타입 문자 값이 모두 number(숫자)이면 두 개 값을 더해서 콘솔 출력.
-      if (typeNum3 === 'number' && typeNum4 === 'number') {
-        console.log(num3 + num4);
-      } else {
-        console.log('숫자만 입력해주세요.');
-      }
-    }
+    // 두 개의 매개변수를 전달받아서 두 개의 값이 모두 숫자면 콘솔 출력
+    // 그렇지 않으면 에러 문구 출력하는 문제
+    // function plus2(num3, num4) {
+    //   // 첫 번째, 두 번째 파라미터로 전달되는 값의 자료형을 문자열로 typeNum3, typeNum4 변수에 저장.
+    //   const typeNum3 = typeof num3;
+    //   const typeNum4 = typeof num4;
+    //   console.log(typeNum3);
+    //   console.log(typeNum4);
+    //   // 두 변수의 타입 문자 값이 모두 number(숫자)이면 두 개 값을 더해서 콘솔 출력.
+    //   if (typeNum3 === 'number' && typeNum4 === 'number') {
+    //     console.log(num3 + num4);
+    //   } // 만약 그렇지 않은 경우에는 에러문구 출력
+    //   else {
+    //     console.log('숫자만 입력해주세요.');
+    //   }
+    // }
 
-    plus2('2', 3);
-
-
-
-
-    // function pass2(num3, num4) {
-    //   if (typeof num3 = Number && typeof num4 = Number) {
-    //     plus2 = num3 + num4;
-    //     return plus2;
-    //   }else {
-    //     console.log('숫자만 입력하세요.');
-    //   };
-    // };
-
-    // pass2(1, 2);
-
+    // plus2('2', 3);
 
 
 
