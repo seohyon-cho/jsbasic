@@ -273,6 +273,16 @@
     }
     introduce2('김영희');
 
+    // parameter에 인수값이 있을 때에만 실행되는 함수를 작성 시.
+    function test(name) {
+      if (name) console.log(name + '님 반갑습니다.');
+    }
+    // parameter에 인수값이 있을 때에만 실행되는 함수를 작성 시. (많이 쓰는 방식. else문이 따로 필요 없는 경우엔 아래의 방식으로, else문이 따로 필요한 경우에는 삼항연산자를 사용하면 됨.)
+    function test2(name) {
+      name && console.log(name + '님 반갑습니다.');
+    }
+    test2(1);
+
   </script>
 </body>
 
