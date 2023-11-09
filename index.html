@@ -139,6 +139,33 @@
       독립적으로 함수를 호출해 쓰고 싶을 떄 쓰는 함수는 '기명 함수'
     */
 
+    /* 
+      return 관련 설명 내용
+    */
+    // 두 개의 숫자를 파라미터를 통해 받아서 콘솔로 찍는 함수
+    function plus(num1, num2) {
+      const result = num1 + num2;
+      console.log(result);
+    }
+    console.log(plus(2, 3));
+
+    //return 사용
+    function returnPlus(num1, num2) {
+      const result = num1 + num2;
+      return result;
+    }
+    console.log(returnPlus(2, 3));
+
+    // 2,3을 더한 값과 4,5를 더한 값을 다시 더해주세요. 라는 문제
+    const result1 = returnPlus(2, 3);
+    const result2 = returnPlus(4, 5);
+    console.log(result1 + result2);
+    console.log(returnPlus(2, 3) + returnPlus(4, 5));
+
+
+
+
+
     // 함수의 정의 (name이라는 매개변수가 연결되어 있는 함수)
     // 매개변수를 선언할 때에는 아무렇게나 짓기보다는, convention에 맞게 짓는 것이 바람직함.
     /*  function inform(name) {
